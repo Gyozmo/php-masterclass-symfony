@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+
+{% block body %}
+
+<section>
+<a href="/post/create"> New Post</a>
+<ul>
+{% for post in posts %}
+    <li><a href='/post/{{ post.id }}'>{{post.title}}</a></li>
+{% endfor %}
+</ul>
+</section>
+
+{% endblock %}
